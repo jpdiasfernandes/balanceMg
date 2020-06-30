@@ -7,10 +7,7 @@ int main () {
     FILE *input;
     char *path;
 
-    if (argc == 1) {
-        input = stdin; //Choosing information path
-        path = "stdin";
-    }
+    shell();
 
 }
 
