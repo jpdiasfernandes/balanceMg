@@ -1,20 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "interface.h"
+#include "files.h"
 
-int main (int argc, char *argv[]) {
+int main () {
     FILE *input;
     char *path;
-    if (argc == 1) input = stdin; //Choosing information path
-    else {
-        input = fopen(argv[1]);
-        path = strdup(argv[1]);
+
+    if (argc == 1) {
+        input = stdin; //Choosing information path
+        path = "stdin";
     }
 
-    if (!input) { //If fopen has a problem opening the file path prints a message and changes input to stdin
-        printf("Error: path is faulty or doesn't exist.");
-        input = stdin;
-    }
-
-    menu(input);
 }
 

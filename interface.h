@@ -4,5 +4,5 @@
  */
 #ifndef BALANCEMG_INTERFACE_H
 #define BALANCEMG_INTERFACE_H
-
+void menu (FILE *input, char *path);
 #endif //BALANCEMG_INTERFACE_H
