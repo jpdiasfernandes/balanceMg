@@ -8,10 +8,12 @@ void shell () {
     char **args;
     int flag;
 
-    printf ("> ");
 
     do {
+        printf("balance> ");
         line = readLine();
+        args = parseLine(line);
+        printf("%s", line);
     } while (flag);
 
 }
