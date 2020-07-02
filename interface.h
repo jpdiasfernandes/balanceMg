@@ -4,7 +4,9 @@
  */
 #ifndef BALANCEMG_INTERFACE_H
 #define BALANCEMG_INTERFACE_H
-void shell();
-char *readLine();
-char **parseLine(char *line);
+void shell ();
+char *readLine ();
+char **parseLine (char *line);
+int interpreter (char **args);
+void help();
 #endif //BALANCEMG_INTERFACE_H

@@ -14,9 +14,7 @@ void shell () {
         printf("balance> ");
         line = readLine();
         args = parseLine(line);
-        for (int i = 0; args[i] ; ++i) {
-            printf("%s\n", args[i]);
-        }
+        flag = interpreter(args);
     } while (flag);
 
 }
@@ -60,7 +58,23 @@ char **parseLine (char *line) {
     return args;
 }
 
+int interpreter (char **args) {
+    int i = 0;
+    int r = 0;
+    char *s;
 
+    for (i = 0; s = args[i]; i++) {
+        if (!strcmp(s, "help"))
+            help();
+        else r = 1;
+    }
+
+    return r;
+}
+
+void help () {
+    printf("This is help!");
+}
 
 
 
