@@ -6,4 +6,5 @@
 #define BALANCEMG_INTERFACE_H
 void shell();
 char *readLine();
+char **parseLine(char *line);
 #endif //BALANCEMG_INTERFACE_H
