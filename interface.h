@@ -9,4 +9,5 @@ char *readLine ();
 char **parseLine (char *line);
 int interpreter (char **args);
 void help();
+void intro();
 #endif //BALANCEMG_INTERFACE_H

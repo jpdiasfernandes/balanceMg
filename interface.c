@@ -9,7 +9,7 @@ void shell () {
     char **args;
     int flag = 1;
 
-
+    printf("For more information type 'intro' or 'help'.\n");
     do {
         printf("balance> ");
         line = readLine();
@@ -66,6 +66,8 @@ int interpreter (char **args) {
     for (i = 0; s = args[i]; i++) {
         if (!strcmp(s, "help"))
             help();
+        else if (!strcmp(s,"intro"))
+            intro();
         else r = 1;
     }
 
@@ -76,22 +78,10 @@ void help () {
     printf("This is help!");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void intro () {
+    char *s = "This is an intro to the app and in a way a tutorial."
+              " My plan was to create a simple app so I could organize my money.\n"
+              "Still a lot of work to do.";
+    puts(s);
+}
 
