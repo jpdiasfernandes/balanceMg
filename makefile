@@ -1,13 +1,13 @@
 balance: main.o files.o interface.o
 	gcc -o balance main.o files.o interface.o
 
-main.o: main.c files.h interface.h
-	gcc -c main.c
+main.o: src/main.c src/files.h src/interface.h
+	gcc -c src/main.c
 
-files.o: files.c files.h
-	gcc -c files.c
+files.o: src/files.c src/files.h
+	gcc -c src/files.c
 
-interface.o: interface.c interface.h
-	gcc -c interface.c
+interface.o: src/interface.c src/interface.h
+	gcc -c src/interface.c
 
 
