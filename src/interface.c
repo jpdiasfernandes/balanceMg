@@ -23,7 +23,6 @@ char *readLine () {
     int bufsize = BUF_SIZE;
     char *line = malloc (bufsize);
     int index = 0;
-
     while (line) {
        char c = getchar();
        if (index >= bufsize) {
@@ -60,7 +59,7 @@ char **parseLine (char *line) {
 
 int interpreter (char **args) {
     int i = 0;
-    int r = 0;
+    int r = 1;
     char *s;
 
     for (i = 0; s = args[i]; i++) {
@@ -68,7 +67,7 @@ int interpreter (char **args) {
             help();
         else if (!strcmp(s,"intro"))
             intro();
-        else r = 1;
+        else r = 0;
     }
 
     return r;
