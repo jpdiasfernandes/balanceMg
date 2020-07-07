@@ -8,4 +8,8 @@ typedef struct linkbal {
     struct linkbal *subset;
     struct linkbal *next;
 } *LBal, Node;
+
+LBal init_lbal ();
+LBal insert_head (LBal l, float value, char *desc, LBal sub);
+LBal init_balance (char *desc, float s);
 #endif //BALANCEMG_BALANCE_H

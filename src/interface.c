@@ -1,10 +1,11 @@
 #include "interface.h"
+#include "balance.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #define BUF_SIZE 1024
 
-void shell () {
+void shell (LBal state) {
     char *line;
     char **args;
     int flag = 1;
@@ -14,7 +15,7 @@ void shell () {
         printf("balance> ");
         line = readLine();
         args = parseLine(line);
-        flag = interpreter(args);
+        flag = interpreter(args, state);
     } while (flag);
 
 }
@@ -57,18 +58,28 @@ char **parseLine (char *line) {
     return args;
 }
 
-int interpreter (char **args) {
+int interpreter (char **args, LBal state) {
     int i = 0;
     int r = 1;
-    char *s;
+    char *s = args[0];
 
-    for (i = 0; s = args[i]; i++) {
-        if (!strcmp(s, "help"))
-            help();
-        else if (!strcmp(s,"intro"))
-            intro();
-        else r = 0;
+    if (!strcmp(s, "help"))
+        help();
+    else if (!strcmp(s,"intro"))
+        intro();
+    else if (!strcmp(s,"new")) {
+        char *desc;
+        float value;
+        if (args[1]) {
+            desc = strdup(args[1]);
+            if (args[2]) {
+                value = strtod(args[2],NULL);
+                state = init_balance(desc, value);
+            }
+            else state = init_balance(desc, 0);
+        }
     }
+    else r = 0;
 
     return r;
 }
@@ -84,3 +95,6 @@ void intro () {
     puts(s);
 }
 
+void new_balance (char *name) {
+
+}

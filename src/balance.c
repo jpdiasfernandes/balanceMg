@@ -8,6 +8,10 @@ LBal init_lbal () {
 }
 
 LBal insert_head (LBal l, float value, char *desc, LBal sub) {
+    LBal *a = &l;
+    while (*a) {
+        a = &(*a)->next;
+    }
     LBal r = malloc (sizeof(Node));
 
     r->value = value;
@@ -15,5 +19,15 @@ LBal insert_head (LBal l, float value, char *desc, LBal sub) {
     r->subset = sub;
     r->next = NULL;
 
+    *a = r;
+
+    return l;
+}
+
+LBal init_balance (char *desc, float value) {
+    LBal r = init_lbal();
+    r = insert_head(r, value, desc, NULL);
+
     return r;
 }
+
