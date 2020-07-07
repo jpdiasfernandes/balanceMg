@@ -5,7 +5,7 @@
 #include <string.h>
 #define BUF_SIZE 1024
 
-void shell (LBal state) {
+void shell (LBal *state) {
     char *line;
     char **args;
     int flag = 1;
@@ -58,7 +58,7 @@ char **parseLine (char *line) {
     return args;
 }
 
-int interpreter (char **args, LBal state) {
+int interpreter (char **args, LBal *state) {
     int i = 0;
     int r = 1;
     char *s = args[0];
@@ -71,14 +71,12 @@ int interpreter (char **args, LBal state) {
         char *desc;
         float value;
         if (args[1]) {
-            desc = strdup(args[1]);
-            if (args[2]) {
-                value = strtod(args[2],NULL);
-                state = init_balance(desc, value);
-            }
-            else state = init_balance(desc, 0);
+            value = strtod(args[1],NULL);
+            *state = init_balance("Total", value);
         }
     }
+    else if (!strcmp(s, "print"))
+        print_state(state);
     else r = 0;
 
     return r;
@@ -95,6 +93,11 @@ void intro () {
     puts(s);
 }
 
-void new_balance (char *name) {
-
+void print_state (LBal *state) {
+    if (*state) {
+        printf("%s : %.2f\n\t", (*state)->desc, (*state)->value);
+        print_state(&(*state)->subset);
+        print_state(&(*state)->next);
+        putchar('\n');
+    }
 }
