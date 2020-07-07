@@ -74,6 +74,7 @@ int interpreter (char **args, LBal *state) {
             value = strtod(args[1],NULL);
             *state = init_balance("Total", value);
         }
+        else *state = init_balance("Total", 0);
     }
     else if (!strcmp(s, "print"))
         print_state(state);
@@ -95,9 +96,10 @@ void intro () {
 
 void print_state (LBal *state) {
     if (*state) {
-        printf("%s : %.2f\n\t", (*state)->desc, (*state)->value);
-        print_state(&(*state)->subset);
+        LBal sub = (*state)->subset;
+        printf("%s : %.2f\n", (*state)->desc, (*state)->value);
+        if (sub) printf("\t->");
+        print_state(&sub);
         print_state(&(*state)->next);
-        putchar('\n');
     }
 }
