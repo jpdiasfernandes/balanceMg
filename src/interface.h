@@ -11,5 +11,6 @@ char **parseLine (char *line);
 int interpreter (char **args, LBal *state);
 void help();
 void intro();
+int new (char **args, LBal *state);
 void print_state(LBal *state);
 #endif //BALANCEMG_INTERFACE_H

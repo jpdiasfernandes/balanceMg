@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 #define BUF_SIZE 1024
 
 void shell (LBal *state) {
@@ -67,15 +68,8 @@ int interpreter (char **args, LBal *state) {
         help();
     else if (!strcmp(s,"intro"))
         intro();
-    else if (!strcmp(s,"new")) {
-        char *desc;
-        float value;
-        if (args[1]) {
-            value = strtod(args[1],NULL);
-            *state = init_balance("Total", value);
-        }
-        else *state = init_balance("Total", 0);
-    }
+    else if (!strcmp(s,"new"))
+        new(&args[1], state);
     else if (!strcmp(s, "print"))
         print_state(state);
     else r = 0;
@@ -92,6 +86,16 @@ void intro () {
               " My plan was to create a simple app so I could organize my money.\n"
               "Still a lot of work to do.";
     puts(s);
+}
+
+int new (char **args, LBal *state) {
+    float value;
+    if (args[0]) {
+        value = strtod(args[0],NULL); //If not a valid number it sets value to 0
+        *state = init_balance("Total", value);
+    }
+    else *state = init_balance("Total", 0);
+
 }
 
 void print_state (LBal *state) {
