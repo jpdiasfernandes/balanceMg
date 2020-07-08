@@ -7,7 +7,7 @@ int main () {
     FILE *input;
     char *path;
 
-    LBal state = init_lbal();
+    State state = init_state();
     shell(&state);
 
 

@@ -5,12 +5,12 @@
 #include "balance.h"
 #ifndef BALANCEMG_INTERFACE_H
 #define BALANCEMG_INTERFACE_H
-void shell (LBal *state);
+void shell (State *state);
 char *readLine ();
 char **parseLine (char *line);
-int interpreter (char **args, LBal *state);
+int interpreter (char **args, State *state);
 void help();
 void intro();
-int new (char **args, LBal *state);
-void print_state(LBal *state);
+int new (char **args, State *state);
+void print_state(State *state);
 #endif //BALANCEMG_INTERFACE_H

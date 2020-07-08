@@ -3,16 +3,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-LBal init_lbal () {
+//initializes a state with NULL
+State init_state () {
     return NULL;
 }
 
-LBal insert_head (LBal l, float value, char *desc, LBal sub) {
-    LBal *a = &l;
+//Inserts a new node to a given a State
+State insert_head (State l, float value, char *desc, State sub) {
+    State *a = &l;
     while (*a) {
         a = &(*a)->next;
     }
-    LBal r = malloc (sizeof(Node));
+    State r = malloc (sizeof(Node));
 
     r->value = value;
     r->desc = strdup(desc);
@@ -24,8 +26,9 @@ LBal insert_head (LBal l, float value, char *desc, LBal sub) {
     return l;
 }
 
-LBal init_balance (char *desc, float value) {
-    LBal r = init_lbal();
+//Initializes a balance state with a given Description and value
+State init_balance (char *desc, float value) {
+    State r = init_state();
     r = insert_head(r, value, desc, NULL);
 
     return r;
