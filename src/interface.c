@@ -115,3 +115,16 @@ void print_state (State *state) {
         print_state(&(*state)->next);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

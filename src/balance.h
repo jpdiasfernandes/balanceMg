@@ -10,6 +10,6 @@ typedef struct state {
 } *State, Node;
 
 State init_state ();
-State insert_head (State l, float value, char *desc, State sub);
+void insert_head (State l, float value, char *desc, State sub);
 State init_balance (char *desc, float s);
 #endif //BALANCEMG_BALANCE_H

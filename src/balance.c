@@ -9,7 +9,7 @@ State init_state () {
 }
 
 //Inserts a new node to a given a State
-State insert_head (State l, float value, char *desc, State sub) {
+void insert_head (State l, float value, char *desc, State sub) {
     State *a = &l;
     while (*a) {
         a = &(*a)->next;
@@ -22,15 +22,23 @@ State insert_head (State l, float value, char *desc, State sub) {
     r->next = NULL;
 
     *a = r;
-
-    return l;
 }
 
 //Initializes a balance state with a given Description and value
 State init_balance (char *desc, float value) {
     State r = init_state();
-    r = insert_head(r, value, desc, NULL);
+    insert_head(r, value, desc, NULL);
 
     return r;
 }
 
+float update_values (State *state) {
+    float total = 0;
+    if (*state) {
+        State sub = (*state)->subset;
+        if (sub) (*state)->value = update_values(sub);
+        total = (*state)->value + update_values((*state)->next);
+    }
+
+    return total;
+}
