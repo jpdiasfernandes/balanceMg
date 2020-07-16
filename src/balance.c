@@ -9,10 +9,9 @@ State init_state () {
 }
 
 //Inserts a new node to a given a State
-void insert_head (State l, float value, char *desc, State sub) {
-    State *a = &l;
-    while (*a) {
-        a = &(*a)->next;
+void insert_head (State *l, float value, char *desc, State sub) {
+    while (*l) {
+        l = &(*l)->next;
     }
     State r = malloc (sizeof(Node));
 
@@ -21,13 +20,13 @@ void insert_head (State l, float value, char *desc, State sub) {
     r->subset = sub;
     r->next = NULL;
 
-    *a = r;
+    *l = r;
 }
 
 //Initializes a balance state with a given Description and value
 State init_balance (char *desc, float value) {
     State r = init_state();
-    insert_head(r, value, desc, NULL);
+    insert_head(&r, value, desc, NULL);
 
     return r;
 }
