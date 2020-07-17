@@ -15,7 +15,7 @@ void shell (State *state) {
     do {
         printf("balance> ");
         line = readLine();
-        args = parseLine(line);
+        args = parseLine(line, " \n\t");
         flag = interpreter(args, state);
     } while (flag); //if flag = 1 i.e exit has been ordered the
                     // shell finishes it porpuse and the app is
@@ -40,11 +40,10 @@ char *readLine () {
 }
 
 //Parses the given Line in order to separate it into possible args
-char **parseLine (char *line) {
+char **parseLine (char *line, const char*delim) {
     int bufsize = BUF_SIZE;
     char **args = malloc (sizeof(char *) * bufsize);
     char *token;
-    const char delim[10] =  " \n\t"; //space, new line and tab are going to limit the args
     int index = 0;
 
     token = strtok(line, delim); //Gets first token
@@ -76,6 +75,8 @@ int interpreter (char **args, State *state) {
         new(&args[1], state);
     else if (!strcmp(s, "print"))
         print_state(state);
+    else if (!strcmp(s, "add"))
+        add (&args[1], state);
     else if (!strcmp(s, "quit")) r = 0;
 
     return r;
@@ -98,7 +99,7 @@ void intro () {
 int new (char **args, State *state) {
     float value;
     if (args[0]) {
-        value = strtod(args[0],NULL); //If not a valid number it sets value to 0
+        value = strFloat(args[0]); //If not a valid number it sets value to 0
         *state = init_balance("Total", value);
     }
     else *state = init_balance("Total", 0);
@@ -114,6 +115,23 @@ void print_state (State *state) {
         print_state(&sub);
         print_state(&(*state)->next);
     }
+}
+
+void add (char **args, State *state) {
+    char **path;
+    float value = 0;
+    int flag = 0;
+    if (args[0]) {
+       path = parseLine(args[0], "/");
+       if (args[1]) value = strFloat(args[1]);
+       *state = add_balance(*state, path, value, &flag);
+       if (flag == 0) printf("Please verify if the path is valid\n");
+       update_values(state);
+    }
+}
+
+float strFloat (char *string) {
+   return strtod(string,NULL); //returns 0 if an error occurs.
 }
 
 

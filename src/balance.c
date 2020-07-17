@@ -34,10 +34,33 @@ State init_balance (char *desc, float value) {
 float update_values (State *state) {
     float total = 0;
     if (*state) {
-        State sub = (*state)->subset;
-        if (sub) (*state)->value = update_values(sub);
-        total = (*state)->value + update_values((*state)->next);
+        if ((*state)->subset) (*state)->value = update_values(&(*state)->subset);
+        total = (*state)->value + update_values(&(*state)->next);
     }
 
     return total;
+}
+
+State add_balance (State state, char **path, float value, int *flag) { //If the value is added return value will be 1
+    if (!state || !(*path)) return state;
+    if (!strcmp(state->desc, *path)) {
+        if (!state->subset && !path[1]) {
+           state->value += value;
+           *flag = 1;
+        }
+        else if (!state->subset) {
+            insert_head(&state->subset, value, path[1], NULL);
+            *flag = 1;
+        }
+        else state->subset = add_balance(state->subset, &path[1], value, flag);
+    }
+    else {
+        if (!state->next) {
+            insert_head(&state, value, *path, NULL);
+            *flag = 1;
+        }
+        else state->next = add_balance(state->next, path, value, flag);
+    }
+    return state;
+
 }
