@@ -78,13 +78,19 @@ int interpreter (char **args, State *state) {
     else if (!strcmp(s, "add"))
         add (&args[1], state);
     else if (!strcmp(s, "quit")) r = 0;
-
+    else (puts("Instructions unclear abort!"));
     return r;
 }
 
 //Displays all the commands and features
 void help () {
-    printf("This is help!\n");
+    char *help  = "This is help! Here you can see all the available commands and their purpose.\n"
+                  " 'new' -> creates the main path 'Total'. You can initialize it with a value. Ex: 'new 100'.\n"
+                  " 'print' -> prints the current state of the balance.\n"
+                  " 'add' -> given a path it adds or creates a given path (depending if the path already exists) with a certain value.\n"
+                  " 'quit' -> exits the program.";
+
+    puts(help);
 }
 
 //Displays an introduction to the app
