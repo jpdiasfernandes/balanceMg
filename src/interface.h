@@ -12,7 +12,8 @@ int interpreter (char **args, State *state);
 void help();
 void intro();
 int new (char **args, State *state);
-void print_state(State *state);
+void print_state(State *state, int tabs);
 float strFloat (char *string);
 void add (char **args, State *state);
+void print_tabs (int tabs);
 #endif //BALANCEMG_INTERFACE_H

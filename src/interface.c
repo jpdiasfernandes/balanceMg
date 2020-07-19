@@ -74,7 +74,7 @@ int interpreter (char **args, State *state) {
     else if (!strcmp(s,"new"))
         new(&args[1], state);
     else if (!strcmp(s, "print"))
-        print_state(state);
+        print_state(state, 0);
     else if (!strcmp(s, "add"))
         add (&args[1], state);
     else if (!strcmp(s, "quit")) r = 0;
@@ -107,14 +107,21 @@ int new (char **args, State *state) {
 }
 
 //Prints the current state of the balance
-void print_state (State *state) {
+void print_state (State *state, int tabs) {
     if (*state) {
         State sub = (*state)->subset;
-        printf("%s : %.2f\n", (*state)->desc, (*state)->value);
-        if (sub) printf("\t->");
-        print_state(&sub);
-        print_state(&(*state)->next);
+        print_tabs(tabs);
+        printf("->%s : %.2f\n", (*state)->desc, (*state)->value);
+        print_state(&sub, tabs+1);
+        print_state(&(*state)->next,tabs);
     }
+}
+
+void print_tabs (int tabs) {
+    int i;
+
+    for (i = 0; i < tabs; i++)
+        putchar('\t');
 }
 
 void add (char **args, State *state) {
