@@ -124,18 +124,18 @@ int new (char **args, State *state) {
 void print_state (State *state, int tabs, FILE *path) {
     if (*state) {
         State sub = (*state)->subset;
-        print_tabs(tabs);
+        print_tabs(tabs, path);
         fprintf(path,"->%s : %.2f\n", (*state)->desc, (*state)->value);
         print_state(&sub, tabs+1,path);
         print_state(&(*state)->next,tabs, path);
     }
 }
 
-void print_tabs (int tabs) {
+void print_tabs (int tabs, FILE *path) {
     int i;
 
     for (i = 0; i < tabs; i++)
-        putchar('\t');
+        fputc('\t', path);
 }
 
 

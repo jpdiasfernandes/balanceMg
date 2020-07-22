@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="50questoes" targetName="balance" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b87730fe-89d1-4d07-b80a-87cbdf00ac6b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.c" afterDir="false" />
+    </list>
+    <list id="18a54a0d-8e55-4afe-8084-bcabe8106439" name="Added main." comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1dzVPExm6cS18t5oeNWchYKv30y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Universidade/PI/aula_08_05_2020" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="balance" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="50questoes" TARGET_NAME="balance" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="50questoes" RUN_TARGET_NAME="balance">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b87730fe-89d1-4d07-b80a-87cbdf00ac6b" name="Default Changelist" comment="" />
+      <changelist id="18a54a0d-8e55-4afe-8084-bcabe8106439" name="Added main." comment="" />
+      <created>1593427882442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593427882442</updated>
+      <workItem from="1593427886334" duration="2315000" />
+      <workItem from="1593430214365" duration="3366000" />
+      <workItem from="1593527859921" duration="4550000" />
+      <workItem from="1593617796445" duration="9958000" />
+      <workItem from="1593716012456" duration="8248000" />
+      <workItem from="1594055791363" duration="16998000" />
+      <workItem from="1594911473147" duration="9642000" />
+      <workItem from="1595006063612" duration="18000" />
+      <workItem from="1595008309296" duration="921000" />
+      <workItem from="1595152954441" duration="2933000" />
+      <workItem from="1595417119446" duration="7941000" />
+      <workItem from="1595436308923" duration="306000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added main.">
+      <created>1593428938121</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593428938121</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added main.">
+      <created>1593429339521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593429339521</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;Added main.&quot;&#10;&#10;This reverts commit 47bd8c33">
+      <created>1593429499659</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593429499659</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added main.">
+      <created>1593430330663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593430330663</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added comments and a path variable.">
+      <created>1593443413423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593443413423</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Deleted future implementations">
+      <created>1593528123204</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593528123204</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implemented a readLine function.">
+      <created>1593536940154</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1593536940154</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changed print that wasn't in the cycle.&#10;Added makefile.">
+      <created>1593635714223</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593635714223</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Started the developing the function interpreter.">
+      <created>1593724725010</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1593724725010</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added intro function.">
+      <created>1593787113370</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1593787113370</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added a src directory and changed makekfile.">
+      <created>1593789009166</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1593789009166</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added balance.c and balance.h.&#10;Immplemented the functions insert_lbal and init_lbal.">
+      <created>1594058905362</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594058905362</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed insert_head function.&#10;Created init_balance function.&#10;Created a state for keeping track of the balance.">
+      <created>1594120372340</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1594120372340</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed state. Now it's passed as a pointer.&#10;Created a print function.">
+      <created>1594136984131</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1594136984131</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changed print_state function.">
+      <created>1594139876865</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1594139876865</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Created the function new. (To polish the interpreter function)">
+      <created>1594222157222</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1594222157222</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added comments.&#10;Changed LBal to State.">
+      <created>1594227489612</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1594227489612</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Created update_values function.&#10;Changed insert_head function to return void.">
+      <created>1594915347897</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1594915347898</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixed state argument in insert_head.">
+      <created>1594917747742</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1594917747743</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added function add and fixed bug in update_values.">
+      <created>1595005633687</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1595005633687</updated>
+    </task>
+    <task id="LOCAL-00021" summary="updated makefile">
+      <created>1595008813333</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1595008813333</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Improved print_state function.&#10;Created print_tabs function.">
+      <created>1595155003132</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1595155003132</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Updated help and added default action in the interpreter.">
+      <created>1595169332882</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1595169332882</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added a delete function and a delete_entry function">
+      <created>1595419547498</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1595419547498</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Improved add_balance function.">
+      <created>1595430657863</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1595430657863</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Updated makefile">
+      <created>1595430988022</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1595430988022</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Updated help. Gave an example to add function.">
+      <created>1595431609875</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1595431609875</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Added save_file function.">
+      <created>1595434923830</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1595434923830</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added main." />
+    <MESSAGE value="Added comments and a path variable." />
+    <MESSAGE value="Deleted future implementations" />
+    <MESSAGE value="Implemented a readLine function." />
+    <MESSAGE value="Changed print that wasn't in the cycle.&#10;Added makefile." />
+    <MESSAGE value="Started the developing the function interpreter." />
+    <MESSAGE value="Added intro function." />
+    <MESSAGE value="Added a src directory and changed makekfile." />
+    <MESSAGE value="Added balance.c and balance.h.&#10;Immplemented the functions insert_lbal and init_lbal." />
+    <MESSAGE value="Fixed insert_head function.&#10;Created init_balance function.&#10;Created a state for keeping track of the balance." />
+    <MESSAGE value="Fixed state. Now it's passed as a pointer.&#10;Created a print function." />
+    <MESSAGE value="Changed print_state function." />
+    <MESSAGE value="Created the function new. (To polish the interpreter function)" />
+    <MESSAGE value="Added comments.&#10;Changed LBal to State." />
+    <MESSAGE value="Created update_values function.&#10;Changed insert_head function to return void." />
+    <MESSAGE value="Fixed state argument in insert_head." />
+    <MESSAGE value="Added function add and fixed bug in update_values." />
+    <MESSAGE value="updated makefile" />
+    <MESSAGE value="Improved print_state function.&#10;Created print_tabs function." />
+    <MESSAGE value="Updated help and added default action in the interpreter." />
+    <MESSAGE value="Added a delete function and a delete_entry function" />
+    <MESSAGE value="Improved add_balance function." />
+    <MESSAGE value="Updated makefile" />
+    <MESSAGE value="Updated help. Gave an example to add function." />
+    <MESSAGE value="Added save_file function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added save_file function." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="829" y="420" width="251" height="264" key="#Notifications" timestamp="1593429353155">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="829" y="420" width="251" height="264" key="#Notifications/0.27.1920.1053@0.27.1920.1053" timestamp="1593429353155" />
+    <state x="19" y="110" width="912" height="884" key="CommitChangelistDialog2" timestamp="1595434923735">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="19" y="110" width="912" height="884" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1595434923735" />
+    <state x="100" y="127" width="1720" height="853" key="DiffContextDialog" timestamp="1593429669759">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="127" width="1720" height="853" key="DiffContextDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1593429669759" />
+    <state x="743" y="311" width="424" height="482" key="FileChooserDialogImpl" timestamp="1595008454785">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="311" width="424" height="482" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1595008454785" />
+    <state width="937" height="344" key="GridCell.Tab.0.bottom" timestamp="1595435018871">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="937" height="344" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595435018871" />
+    <state width="937" height="344" key="GridCell.Tab.0.center" timestamp="1595435018870">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="937" height="344" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595435018870" />
+    <state width="937" height="344" key="GridCell.Tab.0.left" timestamp="1595435018870">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="937" height="344" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595435018870" />
+    <state width="937" height="344" key="GridCell.Tab.0.right" timestamp="1595435018871">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="937" height="344" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595435018871" />
+    <state x="803" y="469" width="303" height="167" key="VCS.ChangelistChooser" timestamp="1593429187810">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="803" y="469" width="303" height="167" key="VCS.ChangelistChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1593429187810" />
+    <state x="555" y="289" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1595434925691">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="289" width="800" height="526" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1595434925691" />
+    <state x="574" y="245" width="762" height="614" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595002477480">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="574" y="245" width="762" height="614" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1595002477480" />
+    <state x="731" y="468" width="447" height="168" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593429026154">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="731" y="468" width="447" height="168" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1593429026154" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1595434493199">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="254" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595434493199" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1595419506451">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595419506451" />
+  </component>
+</project>

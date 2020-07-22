@@ -1,0 +1,3 @@
+/home/jose/Projetos/balanceMg/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jose/Projetos/balanceMg/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jose/Projetos/balanceMg/cmake-build-debug/CMakeFiles/balance.dir
