@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include "files.h"
 #define BUF_SIZE 1024
 
 void shell (State *state) {
@@ -74,11 +75,13 @@ int interpreter (char **args, State *state) {
     else if (!strcmp(s,"new"))
         new(&args[1], state);
     else if (!strcmp(s, "print"))
-        print_state(state, 0);
+        print_state(state, 0,stdout);
     else if (!strcmp(s, "add"))
         add (&args[1], state);
     else if (!strcmp(s, "delete"))
         delete (&args[1], state);
+    else if (!strcmp(s, "save"))
+        save_file(state, args[1]);
     else if (!strcmp(s, "quit")) r = 0;
     else (puts("Instructions unclear abort!"));
     return r;
@@ -118,13 +121,13 @@ int new (char **args, State *state) {
 }
 
 //Prints the current state of the balance
-void print_state (State *state, int tabs) {
+void print_state (State *state, int tabs, FILE *path) {
     if (*state) {
         State sub = (*state)->subset;
         print_tabs(tabs);
-        printf("->%s : %.2f\n", (*state)->desc, (*state)->value);
-        print_state(&sub, tabs+1);
-        print_state(&(*state)->next,tabs);
+        fprintf(path,"->%s : %.2f\n", (*state)->desc, (*state)->value);
+        print_state(&sub, tabs+1,path);
+        print_state(&(*state)->next,tabs, path);
     }
 }
 
