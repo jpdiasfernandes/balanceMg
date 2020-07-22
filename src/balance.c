@@ -49,17 +49,19 @@ State add_balance (State state, char **path, float value, int *flag) { //If the 
            *flag = 1;
         }
         else if (!state->subset) {
-            insert_head(&state->subset, value, path[1], NULL);
+            //Here we set the value to 0 since only the leafs contribute
+            //to the total amount of money.
+            insert_head(&state->subset, 0, path[1], NULL);
             *flag = 1;
         }
-        else state->subset = add_balance(state->subset, &path[1], value, flag);
+        state->subset = add_balance(state->subset, &path[1], value, flag);
     }
     else {
         if (!state->next) {
-            insert_head(&state, value, *path, NULL);
+            insert_head(&state, 0, *path, NULL);
             *flag = 1;
         }
-        else state->next = add_balance(state->next, path, value, flag);
+        state->next = add_balance(state->next, path, value, flag);
     }
     return state;
 
