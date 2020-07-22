@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/balance.dir/src/main.c.o CMakeFiles/balance.dir/src/balance.c.o CMakeFiles/balance.dir/src/interface.c.o CMakeFiles/balance.dir/src/files.c.o  -o balance 

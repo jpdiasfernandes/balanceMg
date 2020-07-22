@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/50questoes.dir/src/main.c.o CMakeFiles/50questoes.dir/src/balance.c.o CMakeFiles/50questoes.dir/src/interface.c.o  -o 50questoes 
