@@ -36,7 +36,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87730fe-89d1-4d07-b80a-87cbdf00ac6b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/balance" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/balance.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
     </list>
     <list id="18a54a0d-8e55-4afe-8084-bcabe8106439" name="Added main." comment="" />
     <option name="SHOW_DIALOG" value="false" />
