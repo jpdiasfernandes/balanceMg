@@ -16,4 +16,5 @@ void print_state(State *state, int tabs);
 float strFloat (char *string);
 void add (char **args, State *state);
 void print_tabs (int tabs);
+void delete (char **args, State *state);
 #endif //BALANCEMG_INTERFACE_H

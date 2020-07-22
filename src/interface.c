@@ -77,6 +77,8 @@ int interpreter (char **args, State *state) {
         print_state(state, 0);
     else if (!strcmp(s, "add"))
         add (&args[1], state);
+    else if (!strcmp(s, "delete"))
+        delete (&args[1], state);
     else if (!strcmp(s, "quit")) r = 0;
     else (puts("Instructions unclear abort!"));
     return r;
@@ -130,6 +132,7 @@ void print_tabs (int tabs) {
         putchar('\t');
 }
 
+
 void add (char **args, State *state) {
     char **path;
     float value = 0;
@@ -137,9 +140,19 @@ void add (char **args, State *state) {
     if (args[0]) {
        path = parseLine(args[0], "/");
        if (args[1]) value = strFloat(args[1]);
-       *state = add_balance(*state, path, value, &flag);
+       *state = add_balance(*state, path, value, &flag); 
        if (flag == 0) printf("Please verify if the path is valid\n");
        update_values(state);
+    }
+}
+
+void delete (char **args, State *state) {
+    char **path;
+    int flag = 0;
+    if (args[0]) {
+        path = parseLine(args[0], "/");
+        *state = delete_entry(*state, path, &flag);
+        if (flag == 0) printf("Please verify if the path is valid\n");
     }
 }
 

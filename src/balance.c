@@ -64,3 +64,15 @@ State add_balance (State state, char **path, float value, int *flag) { //If the 
     return state;
 
 }
+
+State delete_entry (State state, char **path, int *flag) {
+    if (!state || !(*path)) return state;
+    if (!strcmp(state->desc, *path)) {
+        if (!path[1]) {
+            *flag = 1;
+            return state->next;
+        }
+        state->subset = delete_entry(state->subset, &path[1], flag);
+    }
+    else state->next = delete_entry(state->next, &path[0], flag);
+}
