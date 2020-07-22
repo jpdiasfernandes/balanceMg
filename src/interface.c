@@ -87,10 +87,13 @@ int interpreter (char **args, State *state) {
 //Displays all the commands and features
 void help () {
     char *help  = "This is help! Here you can see all the available commands and their purpose.\n"
-                  " 'new' -> creates the main path 'Total'. You can initialize it with a value. Ex: 'new 100'.\n"
-                  " 'print' -> prints the current state of the balance.\n"
-                  " 'add' -> given a path it adds or creates a given path (depending if the path already exists) with a certain value.\n"
-                  " 'quit' -> exits the program.";
+                  "     'new' -> creates the main path 'Total'. You can initialize it with a value. Ex: 'new 100'.\n"
+                  "     'print' -> prints the current state of the balance.\n"
+                  "     'add' -> given a path it adds or creates a given path (depending if the path already exists) with a\n"
+                  " certain value. Ex : 'add Total/orienteering/shoes 200'.\n"
+                  " If the path does not exist then it will create the nodes missing and will start the leaf node with 200.\n"
+                  "     'delete' -> given a path it deletes the node and the subsets bellow that node.\n"
+                  "     'quit' -> exits the program.";
 
     puts(help);
 }
