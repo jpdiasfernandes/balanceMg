@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define BUF_SIZE 1024
 
 //initializes a state with NULL
 State init_state () {
@@ -42,7 +43,8 @@ float update_values (State *state) {
 }
 
 State add_balance (State state, char **path, float value, int *flag) { //If the value is added return value will be 1
-    if (!state || !(*path)) return state;
+    if (!*path) return state;
+    if (!state  && (*path)) insert_head(&state, value, path[0], NULL);
     if (!strcmp(state->desc, *path)) {
         if (!state->subset && !path[1]) {
            state->value += value;
@@ -78,3 +80,12 @@ State delete_entry (State state, char **path, int *flag) {
     }
     else state->next = delete_entry(state->next, &path[0], flag);
 }
+
+
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@ void shell (State *state) {
     printf("For more information type 'intro' or 'help'.\n");
     do {
         printf("balance> ");
-        line = readLine();
+        line = readLine(stdin);
         args = parseLine(line, " \n\t");
         flag = interpreter(args, state);
     } while (flag); //if flag = 1 i.e exit has been ordered the
@@ -25,18 +25,18 @@ void shell (State *state) {
 }
 
 //Stores the input into a string
-char *readLine () {
+char *readLine (FILE *file) {
     int bufsize = BUF_SIZE; //bufsize is inialized with BUF_SIZE;
     char *line = malloc (bufsize);
     int index = 0;
     while (line) {
-       char c = getchar();
+       char c = fgetc(file);
        if (index >= bufsize) { //if index equals the size of bufsize, bufize increments itself by BUF_SIZE
            bufsize += BUF_SIZE;
            line = realloc(line, bufsize);
        }
        line[index++] = c;
-       if (c == '\n' || c == 0) return line; //if c is new line or EOF the line is ready to be returned
+       if (c == '\n' || c <= 0 || c == EOF) return line; //if c is new line or EOF the line is ready to be returned
     }
 }
 
@@ -81,7 +81,9 @@ int interpreter (char **args, State *state) {
     else if (!strcmp(s, "delete"))
         delete (&args[1], state);
     else if (!strcmp(s, "save"))
-        save_file(state, args[1]);
+        save (args[1], state);
+    else if (!strcmp(s, "load"))
+        *state = load_file (args[1]);
     else if (!strcmp(s, "quit")) r = 0;
     else (puts("Instructions unclear abort!"));
     return r;
@@ -166,7 +168,14 @@ float strFloat (char *string) {
    return strtod(string,NULL); //returns 0 if an error occurs.
 }
 
-
+void save (char *file_path, State *state) {
+    FILE *fp;
+   if (fp = fopen(file_path, "w")) {
+       char *parent_path = malloc(BUF_SIZE);
+       parent_path = strcpy(parent_path, "");
+       print_paths(*state, parent_path, fp);
+   }
+}
 
 
 
