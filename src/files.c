@@ -11,7 +11,7 @@ void save_file (State *state, char *path) {
 
     if (file) print_state(state, 0, file);
 }
-
+    //TODO : See if i can simplify line 24
 State load_file (char *path) {
     FILE *file = fopen(path, "r");
     State state = init_state();
@@ -27,6 +27,7 @@ State load_file (char *path) {
     return state;
 }
 
+    //TODO : See if there's a cleaner to do this
 void print_paths(State state, char *parent_path, FILE *file) {
     if (state) {
         int bufsize = BUF_SIZE;

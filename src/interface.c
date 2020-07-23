@@ -7,6 +7,7 @@
 #include "files.h"
 #define BUF_SIZE 1024
 
+    //TODO : Add prompts to confirm somee actions
 void shell (State *state) {
     char *line;
     char **args;
