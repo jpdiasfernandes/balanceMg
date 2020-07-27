@@ -20,4 +20,5 @@ void print_tabs (int tabs, FILE *path);
 void delete (char **args, State *state);
 void save (char *file_path, State *state);
 int alertPrompt (char *alert);
+void load (char *file_path, State *state);
 #endif //BALANCEMG_INTERFACE_H

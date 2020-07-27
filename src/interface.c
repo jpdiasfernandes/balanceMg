@@ -84,7 +84,7 @@ int interpreter (char **args, State *state) {
     else if (!strcmp(s, "save"))
         save (args[1], state);
     else if (!strcmp(s, "load"))
-        *state = load_file (args[1]);
+        load(args[1], state);
     else if (!strcmp(s, "quit")) r = 0;
     else (puts("Instructions unclear abort!"));
     return r;
@@ -161,10 +161,12 @@ void add (char **args, State *state) {
 void delete (char **args, State *state) {
     char **path;
     int flag = 0;
-    if (args[0]) {
-        path = parseLine(args[0], "/");
-        *state = delete_entry(*state, path, &flag);
-        if (flag == 0) printf("Please verify if the path is valid\n");
+    if (alertPrompt("Deleting will make you lose all the information connecting to that path.")) {
+        if (args[0]) {
+            path = parseLine(args[0], "/");
+            *state = delete_entry(*state, path, &flag);
+            if (flag == 0) printf("Please verify if the path is valid\n");
+        }
     }
 }
 
@@ -179,6 +181,12 @@ void save (char *file_path, State *state) {
        parent_path = strcpy(parent_path, "");
        print_paths(*state, parent_path, fp);
    }
+}
+
+void load (char *file_path, State *state) {
+    if (alertPrompt("Loading a new balance will erase your current one!") && fopen(file_path, "r")) {
+            *state = load_file(file_path);
+    }
 }
 
 int alertPrompt (char *alert) {
