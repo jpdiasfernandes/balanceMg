@@ -37,8 +37,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b87730fe-89d1-4d07-b80a-87cbdf00ac6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface.h" afterDir="false" />
     </list>
     <list id="18a54a0d-8e55-4afe-8084-bcabe8106439" name="Added main." comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +49,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -110,6 +111,7 @@
       <workItem from="1595417119446" duration="7941000" />
       <workItem from="1595436308923" duration="306000" />
       <workItem from="1595522997174" duration="1272000" />
+      <workItem from="1595864389421" duration="1709000" />
     </task>
     <task id="LOCAL-00001" summary="Added main.">
       <created>1593428938121</created>
@@ -426,22 +428,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="311" width="424" height="482" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1595008454785" />
-    <state width="937" height="344" key="GridCell.Tab.0.bottom" timestamp="1595521410524">
+    <state width="967" height="278" key="GridCell.Tab.0.bottom" timestamp="1595865783320">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="344" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595521410524" />
-    <state width="937" height="344" key="GridCell.Tab.0.center" timestamp="1595521410523">
+    <state width="967" height="278" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595865783320" />
+    <state width="967" height="278" key="GridCell.Tab.0.center" timestamp="1595865783320">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="344" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595521410523" />
-    <state width="937" height="344" key="GridCell.Tab.0.left" timestamp="1595521410522">
+    <state width="967" height="278" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595865783320" />
+    <state width="967" height="278" key="GridCell.Tab.0.left" timestamp="1595865783319">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="344" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595521410522" />
-    <state width="937" height="344" key="GridCell.Tab.0.right" timestamp="1595521410523">
+    <state width="967" height="278" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595865783319" />
+    <state width="967" height="278" key="GridCell.Tab.0.right" timestamp="1595865783320">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="344" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595521410523" />
+    <state width="967" height="278" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595865783320" />
     <state x="803" y="469" width="303" height="167" key="VCS.ChangelistChooser" timestamp="1593429187810">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -476,14 +478,14 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/interface.c</url>
-          <line>176</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/files.c</url>
           <line>30</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/interface.c</url>
+          <line>183</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

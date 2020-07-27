@@ -7,7 +7,7 @@
 #include "files.h"
 #define BUF_SIZE 1024
 
-    //TODO : Add prompts to confirm somee actions
+    //TODO : Add prompts to confirm some actions
 void shell (State *state) {
     char *line;
     char **args;
@@ -114,12 +114,15 @@ void intro () {
 
 //Creates a new state erasing the existing one
 int new (char **args, State *state) {
-    float value;
-    if (args[0]) {
-        value = strFloat(args[0]); //If not a valid number it sets value to 0
-        *state = init_balance("Total", value);
+    if (alertPrompt("Are you sure? It will remove your current balance!")) {
+        float value;
+        if (args[0]) {
+            value = strFloat(args[0]); //If not a valid number it sets value to 0
+            *state = init_balance("Total", value);
+        }
+        else *state = init_balance("Total", 0);
+
     }
-    else *state = init_balance("Total", 0);
 
 }
 
@@ -178,8 +181,18 @@ void save (char *file_path, State *state) {
    }
 }
 
+int alertPrompt (char *alert) {
+    int r = 0;
+    char *resLine;
+    char **resParsed;
 
+    printf("%s %s\n", alert, "(Y/N)");
+    resLine = readLine(stdin);
+    resParsed = parseLine(resLine, "\n ");
+    if (!strcmp(*resParsed, "Y")) r = 1;
 
+    return r;
+}
 
 
 
