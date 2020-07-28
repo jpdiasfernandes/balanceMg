@@ -15,7 +15,7 @@ void shell (State *state) {
 
     printf("For more information type 'intro' or 'help'.\n");
     do {
-        printf("balance> ");
+        printf("<balance> ");
         line = readLine(stdin);
         args = parseLine(line, " \n\t");
         flag = interpreter(args, state);
@@ -87,7 +87,8 @@ int interpreter (char **args, State *state) {
         load(args[1], state);
     else if (!strcmp(s, "set"))
         add(&args[1], state, "set");
-    else if (!strcmp(s, "quit")) r = 0;
+    else if (!strcmp(s, "quit"))
+        quit(&r);
     else (puts("Instructions unclear abort!"));
     return r;
 }
@@ -205,6 +206,9 @@ int alertPrompt (char *alert) {
     return r;
 }
 
+void quit (int *r) {
+    if (alertPrompt("Make sure you save before exiting. Are you sure you want to quit?")) *r = 0;
+}
 
 
 

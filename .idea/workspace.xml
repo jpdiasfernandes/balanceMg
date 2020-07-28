@@ -37,9 +37,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b87730fe-89d1-4d07-b80a-87cbdf00ac6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/balance.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/balance.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/balance.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/balance.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface.h" afterDir="false" />
     </list>
@@ -114,7 +111,7 @@
       <workItem from="1595417119446" duration="7941000" />
       <workItem from="1595436308923" duration="306000" />
       <workItem from="1595522997174" duration="1272000" />
-      <workItem from="1595864389421" duration="4451000" />
+      <workItem from="1595864389421" duration="5391000" />
     </task>
     <task id="LOCAL-00001" summary="Added main.">
       <created>1593428938121</created>
@@ -361,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595924186816</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added a 'set' command to the shell.">
+      <created>1595924782262</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1595924782262</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +411,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a src directory and changed makekfile." />
     <MESSAGE value="Added balance.c and balance.h.&#10;Immplemented the functions insert_lbal and init_lbal." />
     <MESSAGE value="Fixed insert_head function.&#10;Created init_balance function.&#10;Created a state for keeping track of the balance." />
     <MESSAGE value="Fixed state. Now it's passed as a pointer.&#10;Created a print function." />
@@ -432,7 +435,8 @@
     <MESSAGE value="Added a load function.&#10;Created prompts to some action of the shell." />
     <MESSAGE value="Changed intro message and add error message" />
     <MESSAGE value="Changed alertPrompt message." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed alertPrompt message." />
+    <MESSAGE value="Added a 'set' command to the shell." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a 'set' command to the shell." />
   </component>
   <component name="WindowStateProjectService">
     <state x="829" y="420" width="251" height="264" key="#Notifications" timestamp="1593429353155">
@@ -447,10 +451,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="679" y="355" width="551" height="392" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1595502365271" />
-    <state x="19" y="110" width="912" height="884" key="CommitChangelistDialog2" timestamp="1595924186710">
+    <state x="19" y="110" width="912" height="884" key="CommitChangelistDialog2" timestamp="1595924782163">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="19" y="110" width="912" height="884" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1595924186710" />
+    <state x="19" y="110" width="912" height="884" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1595924782163" />
     <state x="100" y="127" width="1720" height="853" key="DiffContextDialog" timestamp="1593429669759">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -459,30 +463,30 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="311" width="424" height="482" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1595008454785" />
-    <state width="956" height="278" key="GridCell.Tab.0.bottom" timestamp="1595924657846">
+    <state width="956" height="278" key="GridCell.Tab.0.bottom" timestamp="1595927430975">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="956" height="278" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595924657846" />
-    <state width="956" height="278" key="GridCell.Tab.0.center" timestamp="1595924657846">
+    <state width="956" height="278" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595927430975" />
+    <state width="956" height="278" key="GridCell.Tab.0.center" timestamp="1595927430974">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="956" height="278" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595924657846" />
-    <state width="956" height="278" key="GridCell.Tab.0.left" timestamp="1595924657845">
+    <state width="956" height="278" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595927430974" />
+    <state width="956" height="278" key="GridCell.Tab.0.left" timestamp="1595927430974">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="956" height="278" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595924657845" />
-    <state width="956" height="278" key="GridCell.Tab.0.right" timestamp="1595924657846">
+    <state width="956" height="278" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595927430974" />
+    <state width="956" height="278" key="GridCell.Tab.0.right" timestamp="1595927430974">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="956" height="278" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595924657846" />
+    <state width="956" height="278" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595927430974" />
     <state x="803" y="469" width="303" height="167" key="VCS.ChangelistChooser" timestamp="1593429187810">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="803" y="469" width="303" height="167" key="VCS.ChangelistChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1593429187810" />
-    <state x="555" y="289" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1595924189380">
+    <state x="555" y="289" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1595924785529">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="289" width="800" height="526" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1595924189380" />
+    <state x="555" y="289" width="800" height="526" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1595924785529" />
     <state x="574" y="245" width="762" height="614" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595496516975">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -495,10 +499,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="254" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595434493199" />
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1595516151460">
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1595927365294">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595516151460" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595927365294" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

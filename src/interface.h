@@ -21,4 +21,5 @@ void delete (char **args, State *state);
 void save (char *file_path, State *state);
 int alertPrompt (char *alert);
 void load (char *file_path, State *state);
+void quit (int *r);
 #endif //BALANCEMG_INTERFACE_H
