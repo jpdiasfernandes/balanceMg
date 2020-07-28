@@ -155,7 +155,7 @@ void add (char **args, State *state) {
        path = parseLine(args[0], "/");
        if (args[1]) value = strFloat(args[1]);
        *state = add_balance(*state, path, value, &flag); 
-       if (flag == 0) printf("Please verify if the path is valid. You can only add value to lwaf nodes.\n");
+       if (flag == 0) printf("Please verify if the path is valid. You can only add value to leaf nodes.\n");
        update_values(state);
     }
 }
@@ -196,11 +196,10 @@ int alertPrompt (char *alert) {
     char *resLine;
     char **resParsed;
 
-    printf("%s %s\n", alert, "(Y/N)");
+    printf("%s %s ", alert, "(Y/N)");
     resLine = readLine(stdin);
     resParsed = parseLine(resLine, "\n ");
     if (!strcmp(*resParsed, "Y")) r = 1;
-
     return r;
 }
 
