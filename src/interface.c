@@ -106,9 +106,11 @@ void help () {
 
 //Displays an introduction to the app
 void intro () {
-    char *s = "This is an intro to the app and in a way a tutorial."
+    char *s = " This is an intro to the app and in a way a tutorial.\n"
               " My plan was to create a simple app so I could organize my money.\n"
-              "Still a lot of work to do.";
+              " Keep in mind that this is a leaf based model. This meaning that the total value is based on the leaf nodes\n"
+              "of the balance. Ex: Total/home/painting the value of Total will only account for panting value.\n"
+              " This way you shouldn't be able to set nor add values to other nodes other than leaf nodes.";
     puts(s);
 }
 
@@ -153,7 +155,7 @@ void add (char **args, State *state) {
        path = parseLine(args[0], "/");
        if (args[1]) value = strFloat(args[1]);
        *state = add_balance(*state, path, value, &flag); 
-       if (flag == 0) printf("Please verify if the path is valid\n");
+       if (flag == 0) printf("Please verify if the path is valid. You can only add value to lwaf nodes.\n");
        update_values(state);
     }
 }
