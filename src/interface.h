@@ -15,7 +15,7 @@ void intro();
 int new (char **args, State *state);
 void print_state(State *state, int tabs, FILE *path);
 float strFloat (char *string);
-void add (char **args, State *state);
+void add (char **args, State *state, char *mode);
 void print_tabs (int tabs, FILE *path);
 void delete (char **args, State *state);
 void save (char *file_path, State *state);

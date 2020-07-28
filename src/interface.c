@@ -78,13 +78,15 @@ int interpreter (char **args, State *state) {
     else if (!strcmp(s, "print"))
         print_state(state, 0,stdout);
     else if (!strcmp(s, "add"))
-        add (&args[1], state);
+        add (&args[1], state, "add");
     else if (!strcmp(s, "delete"))
         delete (&args[1], state);
     else if (!strcmp(s, "save"))
         save (args[1], state);
     else if (!strcmp(s, "load"))
         load(args[1], state);
+    else if (!strcmp(s, "set"))
+        add(&args[1], state, "set");
     else if (!strcmp(s, "quit")) r = 0;
     else (puts("Instructions unclear abort!"));
     return r;
@@ -147,15 +149,15 @@ void print_tabs (int tabs, FILE *path) {
 }
 
 
-void add (char **args, State *state) {
+void add (char **args, State *state, char *mode) {
     char **path;
     float value = 0;
     int flag = 0;
     if (args[0]) {
        path = parseLine(args[0], "/");
        if (args[1]) value = strFloat(args[1]);
-       *state = add_balance(*state, path, value, &flag); 
-       if (flag == 0) printf("Please verify if the path is valid. You can only add value to leaf nodes.\n");
+       *state = add_balance(*state, path, value, &flag, mode);
+       if (flag == 0) printf("Please verify if the path is valid. You can only add/set value to leaf nodes.\n");
        update_values(state);
     }
 }

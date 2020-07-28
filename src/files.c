@@ -21,7 +21,7 @@ State load_file (char *path) {
     do {
         line = readLine(file);
         args = parseLine(line, " ");
-        if (line[0] != EOF) add(args, &state);
+        if (line[0] != EOF) add(args, &state, "set");
         else flag = 0;
     }while (flag);
     return state;

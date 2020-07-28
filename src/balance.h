@@ -13,6 +13,6 @@ State init_state ();
 void insert_head (State *l, float value, char *desc, State sub);
 State init_balance (char *desc, float value);
 float update_values (State *state);
-State add_balance (State state, char **path, float value, int *flag);
+State add_balance (State state, char **path, float value, int *flag, char *mode);
 State delete_entry (State state, char **path, int *flag);
 #endif //BALANCEMG_BALANCE_H

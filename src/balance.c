@@ -42,12 +42,12 @@ float update_values (State *state) {
     return total;
 }
 
-State add_balance (State state, char **path, float value, int *flag) { //If the value is added return value will be 1
+State add_balance (State state, char **path, float value, int *flag, char *mode) { //If the value is added return value will be 1
     if (!*path) return state;
     if (!state  && (*path)) insert_head(&state, value, path[0], NULL);
     if (!strcmp(state->desc, *path)) {
         if (!state->subset && !path[1]) {
-           state->value += value;
+           state->value = (!strcmp(mode, "add"))? state->value + value : value;
            *flag = 1;
         }
         else if (!state->subset) {
@@ -56,14 +56,14 @@ State add_balance (State state, char **path, float value, int *flag) { //If the 
             insert_head(&state->subset, 0, path[1], NULL);
             *flag = 1;
         }
-        state->subset = add_balance(state->subset, &path[1], value, flag);
+        state->subset = add_balance(state->subset, &path[1], value, flag, mode);
     }
     else {
         if (!state->next) {
             insert_head(&state, 0, *path, NULL);
             *flag = 1;
         }
-        state->next = add_balance(state->next, path, value, flag);
+        state->next = add_balance(state->next, path, value, flag, mode);
     }
     return state;
 
