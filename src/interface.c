@@ -7,7 +7,6 @@
 #include "files.h"
 #define BUF_SIZE 1024
 
-    //TODO : Add prompts to confirm some actions
 void shell (State *state) {
     char *line;
     char **args;
@@ -15,7 +14,7 @@ void shell (State *state) {
 
     printf("For more information type 'intro' or 'help'.\n");
     do {
-        printf("<balance> ");
+        printf("[balance] ");
         line = readLine(stdin);
         args = parseLine(line, " \n\t");
         flag = interpreter(args, state);
@@ -100,8 +99,12 @@ void help () {
                   "     'print' -> prints the current state of the balance.\n"
                   "     'add' -> given a path it adds or creates a given path (depending if the path already exists) with a\n"
                   " certain value. Ex : 'add Total/orienteering/shoes 200'.\n"
+                  "     'set' -> given a path it sets or creates a given path. Similar to add.\n"
                   " If the path does not exist then it will create the nodes missing and will start the leaf node with 200.\n"
                   "     'delete' -> given a path it deletes the node and the subsets bellow that node.\n"
+                  "     'load' -> given a valid file path it will import the saved state of the balance.\n"
+                  "     'save' -> given a file path it will either erase the contents of the file or create a new one.\n"
+                  " The file will contain the current balance state for future usage.\n"
                   "     'quit' -> exits the program.";
 
     puts(help);
