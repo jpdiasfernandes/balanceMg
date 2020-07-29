@@ -75,7 +75,7 @@ int interpreter (char **args, State *state) {
     else if (!strcmp(s,"new"))
         new(&args[1], state);
     else if (!strcmp(s, "print"))
-        print_state(state, 0,stdout);
+        print(state);
     else if (!strcmp(s, "add"))
         add (&args[1], state, "add");
     else if (!strcmp(s, "delete"))
@@ -115,7 +115,7 @@ void intro () {
     char *s = " This is an intro to the app and in a way a tutorial.\n"
               " My plan was to create a simple app so I could organize my money.\n"
               " Keep in mind that this is a leaf based model. This meaning that the total value is based on the leaf nodes\n"
-              "of the balance. Ex: Total/home/painting the value of Total will only account for panting value.\n"
+              "of the balance. Ex: Total/home/painting the value of Total will only account for painting value.\n"
               " This way you shouldn't be able to set nor add values to other nodes other than leaf nodes.";
     puts(s);
 }
@@ -152,6 +152,12 @@ void print_tabs (int tabs, FILE *path) {
         fputc('\t', path);
 }
 
+void print (State *state) {
+    if (!(*state))
+        puts("Nothing to print...You don't have a balance yet. You can create with 'new' or even load.");
+    else print_state(state, 0, stdout);
+}
+
 
 void add (char **args, State *state, char *mode) {
     char **path;
@@ -174,6 +180,7 @@ void delete (char **args, State *state) {
             path = parseLine(args[0], "/");
             *state = delete_entry(*state, path, &flag);
             if (flag == 0) printf("Please verify if the path is valid\n");
+            update_values(state);
         }
     }
 }
